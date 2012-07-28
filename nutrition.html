@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Faughs Juvenile Camogie</title>
+   <link href="css/main.css" type="text/css" rel="stylesheet" />
+
+   
+<!-- javascript for QUIZ validation and calculating score -->
+
+<script type="text/javascript">
+<!--
+// Insert number of questions
+var numQues = 10;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(10);
+
+// Insert answers to questions
+answers[0] = "true";
+answers[1] = "false";
+answers[2] = "false";
+answers[3] = "false";
+answers[4] = "true";
+answers[5] = "false";
+answers[6] = "true";
+answers[7] = "true";
+answers[8] = "true";
+answers[9] = "false";
+
+//work out score
+function getScore(form) {
+  var score = 0;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+      if (form.elements[i].checked) {
+        if (form.elements[i].value == answers[i]) {
+          score++;
+		  continue;
+        }
+	  }
+		else {
+		  if (form.elements[i+numQues].checked) {
+             if (form.elements[i+numQues].value == answers[i]) {
+				score++;
+			 }			
+		  }	  
+        }
+  }
+  
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  
+ //display answers
+   document.getElementById("qrightpyramid").style.display="none";
+   document.getElementById("qrightresults").style.display="inline";
+  }
+
+  // reset results
+function resetResults() {
+	document.getElementById("qrightresults").style.display="none";
+    document.getElementById("qrightpyramid").style.display="inline";
+}
+
+
+//  End -->
+</script> 
+  
+   
+</head>
+
+<body id="nutrition">
+ <!-- comments -->
+
+<!-- Header section with Logo on left and menu on right -->
+<div id="header">
+
+		<a id="logo" href="index.html"><img src="images/logo.png" alt="logo" /></a>
+	<div id="menu">
+		<ul id="nav" >
+
+			<li class="info"><a href="info.html" >Home</a>
+				<ul class="nav">
+					<li class="gallery"><a href="gallery.html" >Gallery</a></li>
+					<li class="facebook"><a href="http://www.facebook.com/faughsgaa">Facebook</a></li>
+				</ul>
+			</li>
+
+			
+			<li class="camogie"><a href="camogie.html" >Camogie</a>
+				<ul class="nav">			
+					<li class="skills"><a href="skills.html" >Skills</a></li>
+				</ul>
+			</li>
+
+			<li class="coolstuff"><a href="coolstuff.html" >Cool Stuff</a>
+				<ul class="nav" >
+					<li class="profiles"><a href="profiles.html" >Profiles</a></li>
+					<li class="lifestyle visible"><a href="life.html" >Media</a></li>
+				</ul>
+			</li>	
+		
+		
+			<li class="behealthy"><a href="behealthy.html" >Be Healthy</a>	
+				<ul>
+				<li class="nutrition"><a class="selected" href="nutrition.html" >Nutrition</a></li>	
+				</ul>
+			</li>			
+			
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- main content text section -->
+
+
+<div id="maincontainer">
+
+		
+	<div id="content" >
+		<div id="contenttop">
+			<img src="images/camogieh.jpg" alt="camogie image"/>
+	
+			<h2>Nutrition</h2>
+		
+			<p>When you are prepare correctly you can perform at your peak and when you recover correctly you can do it all again. This will help you increase you fitness and eliminate fatigue before and after games. This also gives routine and focus before exercise. Don't exercise without eating correctly. You will not get the benefit from your efforts and you will not do yourself and the team justice.</p>
+		
+			<h2>Match / training day: Your body needs fuel!</h2>
+			<p>1. Plenty of liquids. Sip Sip Sip! Make it a habit. If you are dehydrated your body and brain function deteriorates. Don't just gulp down a lot of water before the game you should drink a little and often. No caffeine </p>
+			<p>2. Eat a substantial meal a minimum of 3 hours before the match/training. Plenty of slow release carbohydrates. Potatoes, brown bread, brown rice.</p>
+			<p>3. 30 minutes before training a jam sandwich on white bread , an energy bar or jellies, An Isotonic drink. (You can make your own isotonic drink: A quarter tea spoon of salt 100ml Mi Wadi and to 400 water. This loads your muscles with glycogen. You will burn this glycogen during the match.  </p>
+			<p>3. Half time isotonic drink and jellies. This replaces glycogen in the muscles and speeds up recovery. </p>
+			<p>4. Immediately in after the match, before togging in , isotonic drink, jellies banana. </p>
+			<p>5. Eat a substantial meal within 1 hour of the match/training. Plenty of protein. Fish, chicken. Protein is the raw material to repair muscles and this will speed up recovery.</p>	
+		</div>
+		
+<!-- QUIZ section -->		
+		<div id="quiz">
+			<h2><br/>Nutrition Quiz</h2>
+			<p> Check out these resources about healthy eating and then see what score you get in the quiz below: &nbsp;&nbsp;&nbsp;  
+			<a href="http://www.youthhealth.ie/sites/youthhealth.ie/files/HEAL_NYCI_IHF_2010.pdf" >[more...]</a>&nbsp;&nbsp;&nbsp;
+			<a href="http://www.irishpride.ie/kids-zone/" >[more...]</a>&nbsp;&nbsp;&nbsp;
+			<a href="http://win.niddk.nih.gov/publications/take_charge.htm#healthyeating" >[more...]</a>
+			</p>
+
+		<form action="#" >
+	
+			<div id="qrightblank">
+				<div id="qrightpyramid">
+					<h3>Food Pyramid</h3>
+					<p class="ten">To make it easier to see what you should be including in your diet to make it healthy use the food pyramid shown below. The idea is to eat more foods from the shelves which are larger and less from those which are smaller.</p>
+					<img src="images/foodpyramid.png" alt="food pyramid image"/>
+				</div>
+	
+				<div id="qrightresults">
+					<p class="quiz2">TRUE: Teenagers need extra calcium and protein as their bodies are growing so much</p>
+					<p class="quiz3">FALSE: Breads, cereals, potatoes, pasta, and rice are high carbohydrate, low fat foods. It's what we do to them that effects the fat content e.g. make chips out of potatoes, add rich creamy sauces to pasta etc.</p>
+					<p class="quiz2">FALSE: Low fat milk contains the same amount of calcium as full fat. Calcium is important for strong bones and teeth.</p>
+					<p class="quiz1">FALSE: We need to drink 8 cups of fluid every day.</p>			
+					<p class="quiz3">TRUE: Iron helps to carry oxygen in our blood from our lungs to every body cell. A lack of iron can lead to anaemia and tiredness. Vitamin C, found in fruit and some vegetables helps your body to absorb the iron.</p>
+					<p class="quiz4">FALSE: The sugar in chocolate is absorbed quickly into the blood, which gives you a short energy boost, followed by a sharp dip, when you'll feel hungry again. It takes longer for your body to break down bread, so you get a steady release of energy for a longer length of time.</p>
+					<p class="quiz5">TRUE: An average bag of crisps contains 0.8g salt, while 2 medium slices of bread contains 0.83g salt. Most of the salt in our diets comes from processed foods, including processed meats e.g. bacon and bread, soups, sauces and breakfast cereals. However, bread and breakfast cereals are nutritious foods and should be included as part of a healthy balanced diet.</p>
+					<p class="quiz4">TRUE: Brown bread contains much more fibre than white bread. The body can't digest fibre so it doesn't provide us with energy but it does help to move waste along the digestive system. It helps protect us against constipation and other bowel disorders, certain cancers and heart disease.</p>
+					<p class="quiz2">TRUE: Unsalted popcorn is a great alternative to a packet of crisps. It's much lower in fat and salt but still gives the same crunch! </p>
+					<p class="quiz4">FALSE: It takes about 20 minutes for the brain to get the message that we are full. To avoid that 'stuffed feeling', chew your food well and take time to taste and enjoy it with family and friends, rather than speeding through your meal in front of the TV.</p>
+				</div>
+			</div>
+
+			<div id="qfalse">
+				<p class="quiz2">False<br/><input type="radio" name="q1" value="false" /></p>
+				<p class="quiz3">False<br/><input type="radio" name="q2" value="false" /></p>
+				<p class="quiz2">False<br/><input type="radio" name="q3" value="false" /></p>
+				<p class="quiz1">False<br/><input type="radio" name="q4" value="false" /></p>
+				<p class="quiz3">False<br/><input type="radio" name="q5" value="false" /></p>
+				<p class="quiz4">False<br/><input type="radio" name="q6" value="false" /></p>
+				<p class="quiz5">False<br/><input type="radio" name="q7" value="false" /></p>
+				<p class="quiz4">False<br/><input type="radio" name="q8" value="false" /></p>
+				<p class="quiz2">False<br/><input type="radio" name="q9" value="false" /></p>
+				<p class="quiz4">False<br/><input type="radio" name="q10" value="false" /></p>
+			</div>
+	
+			<div id="qtrue">
+				<p class="quiz2">True<br/><input type="radio" name="q1" value="true" /></p>
+				<p class="quiz3">True<br/><input type="radio" name="q2" value="true" /></p>
+				<p class="quiz2">True<br/><input type="radio" name="q3" value="true" /></p>
+				<p class="quiz1">True<br/><input type="radio" name="q4" value="true" /></p>
+				<p class="quiz3">True<br/><input type="radio" name="q5" value="true" /></p>
+				<p class="quiz4">True<br/><input type="radio" name="q6" value="true" /></p>
+				<p class="quiz5">True<br/><input type="radio" name="q7" value="true" /></p>
+				<p class="quiz4">True<br/><input type="radio" name="q8" value="true" /></p>
+				<p class="quiz2">True<br/><input type="radio" name="q9" value="true" /></p>
+				<p class="quiz4">True<br/><input type="radio" name="q10" value="true" /></p>
+			</div>
+
+			<div id="qleft">
+				<p class="quiz2">Teenagers need 5 portions of foods from the dairy shelf every day?</p>
+				<p class="quiz3">Bread and potatoes are fattening?</p>
+				<p class="quiz2">Full fat milk contains more calcium then low fat varieties?</p>
+				<p class="quiz1">We need to drink 5 cups of water a day.</p>
+				<p class="quiz3">The iron in meat is seven times more easily absorbed than the iron in green vegetables</p>
+				<p class="quiz4">A bar of chocolate is a better energy boost than a sandwich</p>
+				<p class="quiz5">An average bag of crisps contains about the same amount of salt as 2 medium slices of white sliced bread</p>
+				<p class="quiz4">Brown bread is more healthy than white bread</p>
+				<p class="quiz2">Popcorn is an example of a healthy snack</p>
+				<p class="quiz4">When we eat a meal it takes about 10 minutes for the brain to get the message that we are full</p>
+			</div>
+	
+			<div id="qnum">
+				<p class="quiz2">1.</p>
+				<p class="quiz3">2.</p>
+				<p class="quiz2">3.</p>
+				<p class="quiz1">4.</p>
+				<p class="quiz3">5.</p>
+				<p class="quiz4">6.</p>
+				<p class="quiz5">7.</p>
+				<p class="quiz4">8.</p>
+				<p class="quiz2">9.</p>
+				<p class="quiz4">10.</p>
+			</div>
+
+	
+			<div id="results">
+				<input type="button" value="Get score" onclick="getScore(this.form)" />
+				<input type="reset" value="Clear answers" onclick="resetResults()" />
+				Score = <strong><input class="bgclr" type="text" size="3" name="percentage" disabled="disabled" /></strong>
+			</div>
+
+		</form>
+	
+		</div>
+
+
+
+		<div id="footer">
+			<div id="leftpic"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

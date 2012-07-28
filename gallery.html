@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Faughs Juvenile Camogie</title>
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="highslide/highslide-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+
+<!-- Javascript to setup 3 gallerys  -->
+	
+<script type="text/javascript">
+	hs.graphicsDir = 'highslide/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.fadeInOut = true;
+	hs.outlineType = 'rounded-white';
+	hs.headingEval = 'this.a.title';
+	hs.numberPosition = 'heading';
+	hs.useBox = true;
+	hs.width = 800;
+	hs.height = 533;
+	hs.showCredits = false;
+	hs.dimmingOpacity = 0.6;
+
+	// Add the slideshow providing the controlbar and the thumbstrip
+	hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 3000,
+		repeat: false,
+		useControls: true,
+		fixedControls: 'fit',
+		overlayOptions: {
+			position: 'top right',
+			offsetX: 200,
+			offsetY: -65
+		},
+		thumbstrip: {
+			position: 'rightpanel',
+			mode: 'float',
+			relativeTo: 'expander',
+			width: '210px'
+		}
+	});
+
+// First gallery config object
+var config1 = {
+	slideshowGroup: 'group1',
+	thumbnailId: 'thumb1',
+	autoplay: true,
+	transitions: ['expand', 'crossfade']
+};
+
+// Second gallery config object
+var config2 = {
+	slideshowGroup: 'group2',
+	thumbnailId: 'thumb2',
+	autoplay: true,
+	transitions: ['expand', 'crossfade']
+};
+
+// third gallery config object
+var config3 = {
+	slideshowGroup: 'group3',
+	thumbnailId: 'thumb3',
+	autoplay: true,
+	transitions: ['expand', 'crossfade']
+};
+
+	// Make all images animate to the one visible thumbnail
+	/*var miniGalleryOptions1 = {
+		thumbnailId: 'thumb1'
+	}
+	var miniGalleryOptions2 = {
+		thumbnailId: 'thumb2'
+	}*/
+</script>
+
+   
+   
+</head>
+
+<body id="gallery">
+
+<!-- Header section with Logo on left and menu on right -->
+<div id="header">
+
+		<a id="logo" href="index.html"><img src="images/logo.png" alt="logo" /></a>
+ 	
+
+	<div id="menu">
+		<ul id="nav" >
+
+			<li class="info"><a  href="info.html" >Home</a>
+				<ul>
+					<li class="gallery"><a class="selected" href="gallery.html" >Gallery</a></li>
+					<li class="facebook"><a href="http://www.facebook.com/faughsgaa">Facebook</a></li>
+				</ul>
+			</li>
+
+			
+			<li class="camogie"><a href="camogie.html" >Camogie</a>
+				<ul class="nav">			
+					<li class="skills"><a href="skills.html" >Skills</a></li>
+				</ul>
+			</li>
+
+			<li class="coolstuff"><a href="coolstuff.html" >Cool Stuff</a>
+				<ul class="nav" >
+					<li class="profiles"><a href="profiles.html" >Profiles</a></li>
+					<li class="lifestyle"><a href="life.html" >Media</a></li>
+				</ul>
+			</li>	
+		
+		
+			<li class="behealthy"><a href="behealthy.html" >Be Healthy</a>	
+				<ul class="nav">
+				<li class="nutrition"><a href="nutrition.html" >Nutrition</a></li>	
+				</ul>
+			</li>			
+			
+		</ul>
+	</div>
+</div>
+
+<!-- 3 Gallery panels -->
+
+<div id="maincontainer">
+
+	<div id="content">
+		
+			<div class="gallerybox">
+ 				<h3>Gallery 3</h3>
+				<div class="highslide-gallery">
+	
+					<a id="thumb1" href='images/gallery3/c01.jpg' onclick="return hs.expand(this, config3)" title="">
+					<img src='images/gallery3/c01thumb230.jpg'  alt=''/></a>
+
+					<div class="hidden-container">
+						<a  href='images/gallery3/c02.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c02thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c03.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c03thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c04.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c04thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c05.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c05thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c06.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c06thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c07.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c07thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c08.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c08thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c09.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c09thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c10.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c10thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c11.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c11thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c12.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c12thumb1.jpg' alt=''/></a>
+						<a  href='images/gallery3/c13.jpg' title="" onclick="return hs.expand(this, config3)"><img src='images/gallery3/c13thumb1.jpg' alt=''/></a>
+
+					</div>
+				</div>
+								
+				
+ 			    <p >Dublin U14 blitz in Waterford July 2012</p>
+			</div>
+
+
+			<div class="gallerybox">
+ 			   <h3>Gallery 2</h3>
+				<div class="highslide-gallery">
+	
+					<a id="thumb2" href='images/gallery2/c01.jpg' onclick="return hs.expand(this, config2)" title="">
+					<img src='images/gallery2/c01thumb230.jpg'  alt=''/></a>
+
+						<div class="hidden-container">
+						<a  href='images/gallery2/c02.jpg' onclick="return hs.expand(this, config2)" title="">
+						<img src='images/gallery2/c02thumb.jpg' alt=''/></a>
+
+						<a  href='images/gallery2/c03.jpg' title="" onclick="return hs.expand(this, config2)">
+						<img src='images/gallery2/c03thumb.jpg' alt=''/></a>
+
+						<a  href='images/gallery2/c04.jpg' title="" onclick="return hs.expand(this, config2)">
+						<img src='images/gallery2/c04thumb.jpg' alt=''/></a>
+
+						<a  href='images/gallery2/c05.jpg' title="" onclick="return hs.expand(this, config2)">
+						<img src='images/gallery2/c05thumb.jpg' alt=''/></a>
+
+						<a  href='images/gallery2/c06.jpg' title="" onclick="return hs.expand(this, config2)">
+						<img src='images/gallery2/c06thumb.jpg' alt=''/></a>
+						<a  href='images/gallery2/c07.jpg' title="" onclick="return hs.expand(this, config2)"><img src='images/gallery2/c07thumb.jpg' alt=''/></a>
+						<a  href='images/gallery2/c08.jpg' title="" onclick="return hs.expand(this, config2)"><img src='images/gallery2/c08thumb.jpg' alt=''/></a>
+						<a  href='images/gallery2/c09.jpg' title="" onclick="return hs.expand(this, config2)"><img src='images/gallery2/c09thumb.jpg' alt=''/></a>
+						<a  href='images/gallery2/c10.jpg' title="" onclick="return hs.expand(this, config2)"><img src='images/gallery2/c10thumb.jpg' alt=''/></a>
+
+					</div>
+				</div>
+			   
+	
+  			    <p >Trip to Wexford June 2012</p>
+			</div>
+
+			<div class="gallerybox">
+ 			
+ 			   <h3>Gallery 1</h3>
+				<div class="highslide-gallery">
+	
+					<a id="thumb3" href='images/gallery1/c01.jpg' onclick="return hs.expand(this, config1)" title="">
+					<img src='images/gallery1/c01thumb230.jpg'  alt=''/></a>
+
+					<div class="hidden-container">
+						<a  href='images/gallery1/c02.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c02thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c03.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c03thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c04.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c04thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c05.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c05thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c06.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c06thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c07.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c07thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c08.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c08thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c09.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c09thumb.jpg' alt=''/></a>
+						<a  href='images/gallery1/c10.jpg' title="" onclick="return hs.expand(this, config1)"><img src='images/gallery1/c10thumb.jpg' alt=''/></a>
+					</div>
+					<p >Feile Tournament 2012</p>
+				</div>
+			</div>
+			   
+		   
+			   
+ 	</div>
+</div>
+
+
+
+
+
+  <div id="footer">
+  	<div id="leftpic"></div>
+  </div>
+
+</body>
+</html>
